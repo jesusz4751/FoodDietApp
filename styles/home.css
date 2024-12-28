@@ -1,25 +1,89 @@
-.header_grid{
+.header-grid{
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-}
-.title_section{
-  padding-left: 42px;
+  margin-left: 42px;
 }
 .title{
   font-size: 30px;
   display: grid;
   row-gap: 8px;
-  margin-top: 110px;
+  margin-top: 100px;
 }
 .title-text{
   margin: 0;
   font-weight: 400;
 }
-.main_description{
+.main-description{
   margin-top: 40px;
   font-size: 16px;
 }
 #title-image{
-  height: 322px;
-  margin-top: 70px;
+  height: 310px;
+  margin-top: 60px;
+}
+
+
+.home-button-grid{
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 104px;
+  height: 54px;
+}
+#restaurant-selector{
+  width: 30%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 13% 1fr 20%;
+  align-items: center;
+  
+  background-color: #f9f9f9;
+  border: 1px solid #a6a6a6;
+  border-radius: 10px;
+  
+  text-align: left;
+  padding-left: 18px;
+}
+#restaurant-choice-text{
+  font-size: 18px;
+}
+/* .fa-solid{
+  margin-right: 14px;
+} */
+.button-caption{
+  position: absolute;
+  top: -32px;
+  left: 2px;
+  color: #313131;
+  font-size: 13px;
+}
+.calorie-input-container{
+  position: relative;
+}
+#calorie-input{
+  width: 320px;
+  height: 100%;
+  position: relative;
+  background-color: #f9f9f9;
+  border: 1px solid #a6a6a6;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#next-button{
+  width: 110px;
+  
+  border-radius: 75px;
+  border: none;
+  
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 16px;
 }

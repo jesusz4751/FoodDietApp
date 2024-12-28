@@ -3,32 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Diet App</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <title>Food Diet App</title>
   <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/home.css">
+  <script src="https://kit.fontawesome.com/4dc47755ee.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="header_grid">
-    <div class="title_section">
+  <div class="header-grid">
+    <div class="title-section">
       <div class="title">
         <h1 class="title-text">Eat out.</h1>
         <h1 class="title-text">Keep your diet.</h1>
       </div>
-      <div class="main_description">
+      <div class="main-description">
         <p>Stay on track with your diet while eating at your favorite restaurants</p>
       </div>
     </div>
-    <div class="image_section">
+    <div class="image-section">
       <img src="images/pexels-kampus-8777829.jpg" id="title-image">
     </div>
   </div>
-  <div class="home_buttons">
-    <button>Restaurant</button>
-    <input placeholder="Calories"></input>
-    <button>Next</button>
+  <div class="home-button-grid">
+    <button id="restaurant-selector">
+      <i class="fa-solid fa-bars fa-2x "></i>
+      <p id="restaurant-choice-text">McDonald's</p>
+      <p class="button-caption">Restaurant</p>
+    </button>
+    <div class="calorie-input-container">
+      <input placeholder="Enter amout here" id="calorie-input" type="number">
+      <p class="button-caption">Calories</p>
+    </div>
+    <button id="next-button">Next</button>
   </div>
 </body>
 </html>
