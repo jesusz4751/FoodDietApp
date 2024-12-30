@@ -3,34 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Food selector</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/food_selector.css">
+  <script src="https://kit.fontawesome.com/4dc47755ee.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>First, select an entree</h1>
-  <p style="display: none;">Select a side to finish your meal</p>
-  <h3>Popular choices</h3>
-  <div class="food item">
-    <p>Spicy McCrispy</p>
-    <div class="selector_macros">
-      <div class="macro_container">
+  <h1 id="title">First, select an entree</h1>
+  <p style="visibility: hidden;" id="description">Select a side to finish your meal</p>
+  <h3 id="header">Popular choices</h3>
+  <div class="food-item">
+    <div class="food-information-container">
+      <p class="food-name">Spicy McCrispy</p>
+      <div class="macro-container">
         <p class="macro">Calories</p>
-        <p class="macro_amount">1024</p>
+        <p class="macro-amount">1024</p>
       </div>
-      <div class="macro_container">
+      <div class="macro-container">
         <p class="macro">Protein</p>
-        <p class="macro_amount">28g</p>
+        <p class="macro-amount">28g</p>
       </div>
-      <div class="macro_container">
+      <div class="macro-container">
         <p class="macro">Carbs</p>
-        <p class="macro_amount">100g</p>
+        <p class="macro-amount">100g</p>
       </div>
-      <div class="macro_container">
+      <div class="macro-container">
         <p class="macro">Fat</p>
-        <p class="macro_amount">14g</p>
+        <p class="macro-amount">14g</p>
       </div>
     </div>
-    <img src="images/McDonalds/mccrispy-removebg-preview.png" width="200px">
-    <button>Select</button>
+    <img src="images/McDonalds/mccrispy-removebg-preview.png" class="food-image">
+    <button class="food-select-button" id="button1">Select</button>
   </div>
 </body>
 </html>
