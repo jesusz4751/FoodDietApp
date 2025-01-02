@@ -108,6 +108,10 @@
   border: 1px solid #a6a6a6;
   border-radius: 10px;
   padding-left: 10px;
+  outline: none;
+}
+#calorie-input:focus{
+  border: 1.5px solid #2a2a2a;
 }
 /* Removes the arrows from the calorie input textbox */
 input[type="number"]::-webkit-inner-spin-button,
