@@ -1,3 +1,22 @@
 body{
   font-family: "Inter", serif;
 }
+
+.fade{
+  border-radius: 75px;
+  border: none;
+  transition: all 0.28s;
+  background-color: #2a2a2a;
+  color: white;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.fade:hover{
+  background-color: white;
+  color: #2a2a2a;
+  border: 1px solid #2a2a2a;
+}
