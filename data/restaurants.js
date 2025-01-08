@@ -1,4 +1,4 @@
-const restaurants = {
+export const restaurants = {
   mcDonalds: {
     entree: {
       bigMac: {

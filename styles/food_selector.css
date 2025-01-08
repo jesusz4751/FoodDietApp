@@ -37,7 +37,7 @@
 .food-name{
   font-size: 26px;
   align-self: center;
-  padding-left: 6%;
+  padding-left: 5%;
 }
 .macro-container{
   display: flex;
@@ -65,4 +65,7 @@
   height: 75%;
   align-self: center;
   font-size: 18px;
+}
+.food-item-container{
+  margin-bottom: 2%;
 }
