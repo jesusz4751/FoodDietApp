@@ -1,14 +1,12 @@
 import {restaurants} from "../data/restaurants.js";
-import {userData} from "../data/user.js";
 
+const userCalories = sessionStorage.getItem('calories');
 let entrees = restaurants.mcDonalds.entree;
-console.log(entrees);
 let allItemsHTML = '';
 
-// for (const item in entrees){
-// }
 Object.values(entrees).forEach((item) => {
-  allItemsHTML += `<div class="food-item">
+  if (item.calories <= userCalories){
+    allItemsHTML += `<div class="food-item">
     <div class="food-information-container">
       <p class="food-name">${item.name}</p>
       <div class="macro-container">
@@ -31,7 +29,6 @@ Object.values(entrees).forEach((item) => {
     <img src="images/McDonalds/mccrispy-removebg-preview.png" class="food-image">
     <button class="food-select-button fade" id="button1">Select</button>
   </div>`;
-})
-
+  }
+});
 document.querySelector('.food-item-container').innerHTML = allItemsHTML;
-// console.log(document.querySelector('.food-item-container').innerHTML);
