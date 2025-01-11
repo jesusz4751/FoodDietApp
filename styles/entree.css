@@ -1,0 +1,16 @@
+#title, #header{
+  margin: 0px;
+  font-weight: normal;
+}
+#title{
+  margin-top: 24px;
+  margin-bottom: 20px;
+  margin-left: 43px;
+  font-size: 50px;
+}
+#header{
+    margin-bottom: 2px;
+    margin-left: 41px;
+    color: #4b4b4b;
+    font-size: 17px;
+}

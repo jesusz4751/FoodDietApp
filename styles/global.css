@@ -20,3 +20,22 @@ body{
   color: #2a2a2a;
   border: 1px solid #2a2a2a;
 }
+
+.fadeReverse{
+  border-radius: 75px;
+  border: 1px solid #2a2a2a;
+  transition: all 0.28s;
+  background-color: white;
+  color: #2a2a2a;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.fadeReverse:hover{
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+}
