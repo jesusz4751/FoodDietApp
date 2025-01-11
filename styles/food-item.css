@@ -1,11 +1,18 @@
 .food-item{
   display: grid;
+  position: relative;
   grid-template-columns: 1fr 20% 12%;
   gap: 16px;
   height: 100%;
   margin-left: 40px;
   margin-right: 44px;
   margin-bottom: 24px;
+}
+.amount{
+  position: absolute;
+  top: 14%;
+  right: 22.14%;
+  font-size: 26px;
 }
 .food-information-container{
   display: grid;
@@ -51,12 +58,6 @@
   padding-bottom: 4px;
   justify-items: center;
 }
-.amount{
-  position: absolute;
-  top: 14%;
-  right: 22.15%;
-  font-size: 26px;
-}
 .amount-button{
   aspect-ratio: 1/1;
   width: 4.3vw;
@@ -67,7 +68,6 @@
   font-size: 24px;
   margin: 0px;
 }
-
 .food-select-button{  
   height: 75%;
   max-height: 63.5px;

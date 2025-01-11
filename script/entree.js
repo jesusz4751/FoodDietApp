@@ -39,4 +39,4 @@ Object.values(entrees).forEach((item) => {
     </div>`;
   }
 });
-document.querySelector('.food-item-container').innerHTML = allItemsHTML;
+document.querySelector('.food-item-container').innerHTML += allItemsHTML;
