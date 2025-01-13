@@ -5,12 +5,16 @@ const userCalories = 1000;
 // if (!userCalories){
 //   window.location.href = 'home.html';
 // }
-let entrees = restaurants.mcDonalds.entree;
+const entree = sessionStorage.getItem('entree');
+const entreeAmount = sessionStorage.getItem('entreeAmount');
+const caloriesRemaining = userCalories - (restaurants.mcDonalds.entree[entree].calories * entreeAmount);
+document.getElementById('title').innerText = `You have ${caloriesRemaining} calories remaining`
+let sides = restaurants.mcDonalds.side;
 let allItemsHTML = '';
 
 //Generate html for food items
-Object.entries(entrees).forEach(([key, item]) => {
-  if (item.calories <= userCalories){
+Object.entries(sides).forEach(([key, item]) => {
+  if (item.calories <= caloriesRemaining){
     allItemsHTML += `<div class="food-item">
       <div class="food-information-container">
         <p class="food-name">${item.name}</p>
@@ -47,8 +51,8 @@ document.querySelectorAll('.plus').forEach((button) => {
   button.addEventListener('click', () =>{
     const amountIndicator = document.getElementById(`amount-${button.dataset.foodId}`);
     const currentNumber = parseInt(amountIndicator.textContent, 10) || 0;
-    const totalCalories = entrees[button.dataset.foodId].calories * (currentNumber+1);
-    if (totalCalories <= userCalories){
+    const totalCalories = sides[button.dataset.foodId].calories * (currentNumber+1);
+    if (totalCalories <= caloriesRemaining){
       amountIndicator.textContent = currentNumber + 1;
     }
   })
