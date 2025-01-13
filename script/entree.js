@@ -8,7 +8,8 @@ const userCalories = 1000;
 let entrees = restaurants.mcDonalds.entree;
 let allItemsHTML = '';
 
-Object.values(entrees).forEach((item) => {
+//Generate html for food items
+Object.entries(entrees).forEach(([key, item]) => {
   if (item.calories <= userCalories){
     allItemsHTML += `<div class="food-item">
       <div class="food-information-container">
@@ -31,12 +32,34 @@ Object.values(entrees).forEach((item) => {
         </div>
       </div>
       <div class="quantity-selector">
-        <button class="minus amount-button fadeReverse"><i class="fa-solid fa-minus"></i></button>
-        <p class="amount-indicator">1</p>
-        <button class="plus amount-button fadeReverse"><i class="fa-solid fa-plus"></i></button>
+        <button class="minus amount-button fadeReverse" data-food-id="${key}"><i class="fa-solid fa-minus"></i></button>
+        <p class="amount-indicator" id="amount-${key}">1</p>
+        <button class="plus amount-button fadeReverse" data-food-id="${key}"><i class="fa-solid fa-plus"></i></button>
       </div>
-      <button class="food-select-button fade">Select</button>
+      <button class="food-select-button fade" data-food-id="${key}">Select</button>
     </div>`;
   }
 });
 document.querySelector('.food-item-container').innerHTML += allItemsHTML;
+
+//Logic for plus and minus buttons
+document.querySelectorAll('.plus').forEach((button) => {
+  button.addEventListener('click', () =>{
+    const amountIndicator = document.getElementById(`amount-${button.dataset.foodId}`);
+    const currentNumber = parseInt(amountIndicator.textContent, 10) || 0;
+    const totalCalories = entrees[button.dataset.foodId].calories * (currentNumber+1);
+    if (totalCalories <= userCalories){
+      amountIndicator.textContent = currentNumber + 1;
+    }
+  })
+})
+document.querySelectorAll('.minus').forEach((button) => {
+  button.addEventListener('click', () =>{
+    const amountIndicator = document.getElementById(`amount-${button.dataset.foodId}`);
+    const currentNumber = parseInt(amountIndicator.textContent, 10) || 0;
+    //Only subtract if greater than one
+    if (currentNumber > 1){
+      amountIndicator.textContent = currentNumber - 1;
+    }
+  })
+})
