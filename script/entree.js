@@ -71,7 +71,6 @@ document.querySelectorAll('.food-select-button').forEach((button) => {
     const foodAmount = document.getElementById(`amount-${button.dataset.foodId}`).textContent;
     sessionStorage.setItem('entreeAmount', foodAmount);
     sessionStorage.setItem('entree', button.dataset.foodId);
-    console.log(sessionStorage.getItem('entreeAmount'));
     window.location.href = 'side.html';
   });
 })

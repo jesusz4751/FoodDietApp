@@ -73,9 +73,8 @@ document.querySelectorAll('.minus').forEach((button) => {
 document.querySelectorAll('.food-select-button').forEach((button) => {
   button.addEventListener('click', () => {
     const foodAmount = document.getElementById(`amount-${button.dataset.foodId}`).textContent;
-    sessionStorage.setItem('entreeAmount', foodAmount);
-    sessionStorage.setItem('entree', button.dataset.foodId);
-    console.log(sessionStorage.getItem('entreeAmount'));
-    window.location.href = 'side.html';
+    sessionStorage.setItem('sideAmount', foodAmount);
+    sessionStorage.setItem('side', button.dataset.foodId);
+    window.location.href = 'order-summary.html';
   });
 })
