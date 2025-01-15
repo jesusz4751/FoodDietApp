@@ -32,9 +32,9 @@ Object.entries(entrees).forEach(([key, item]) => {
         </div>
       </div>
       <div class="quantity-selector">
-        <button class="minus amount-button fadeReverse" data-food-id="${key}"><i class="fa-solid fa-minus"></i></button>
+        <button class="minus amount-button disable minus-${key}" data-food-id="${key}"><i class="fa-solid fa-minus"></i></button>
         <p class="amount-indicator" id="amount-${key}">1</p>
-        <button class="plus amount-button fadeReverse" data-food-id="${key}"><i class="fa-solid fa-plus"></i></button>
+        <button class="plus amount-button fadeReverse plus-${key}" data-food-id="${key}"><i class="fa-solid fa-plus"></i></button>
       </div>
       <button class="food-select-button fade" data-food-id="${key}">Select</button>
     </div>`;
@@ -44,22 +44,44 @@ document.querySelector('.food-item-container').innerHTML += allItemsHTML;
 
 //Logic for plus and minus buttons
 document.querySelectorAll('.plus').forEach((button) => {
-  button.addEventListener('click', () =>{
-    const amountIndicator = document.getElementById(`amount-${button.dataset.foodId}`);
-    const currentNumber = parseInt(amountIndicator.textContent, 10) || 0;
-    const totalCalories = entrees[button.dataset.foodId].calories * (currentNumber+1);
-    if (totalCalories <= userCalories){
-      amountIndicator.textContent = currentNumber + 1;
-    }
-  })
+  const id = button.dataset.foodId
+  const calories = entrees[id].calories;
+  if (calories*2 > userCalories){
+    button.classList.add('disable');
+    button.classList.toggle('fadeReverse')
+  }
+  else{
+    button.addEventListener('click', () =>{
+      const amountIndicator = document.getElementById(`amount-${id}`);
+      const currentNumber = parseInt(amountIndicator.textContent, 10) || 0;
+      const totalCalories = calories * (currentNumber+1);
+      if (totalCalories <= userCalories){
+        amountIndicator.textContent = currentNumber + 1;
+        document.querySelector(`.minus-${id}`).classList.remove('disable');
+        document.querySelector(`.minus-${id}`).classList.add('fadeReverse');
+        //disables plus if cannot add another meal
+        if (calories * (currentNumber+2) > userCalories){
+          button.classList.add('disable');
+          button.classList.remove('fadeReverse');
+        }
+      }
+    })
+  }
 })
 document.querySelectorAll('.minus').forEach((button) => {
+  const id = button.dataset.foodId
   button.addEventListener('click', () =>{
-    const amountIndicator = document.getElementById(`amount-${button.dataset.foodId}`);
+    const amountIndicator = document.getElementById(`amount-${id}`);
     const currentNumber = parseInt(amountIndicator.textContent, 10) || 0;
     //Only subtract if greater than one
     if (currentNumber > 1){
       amountIndicator.textContent = currentNumber - 1;
+      if (currentNumber === 2){
+        button.classList.remove('fadeReverse');
+        button.classList.add('disable');
+      }
+      document.querySelector(`.plus-${id}`).classList.add('fadeReverse');
+      document.querySelector(`.plus-${id}`).classList.remove('disable');
     }
   })
 })
