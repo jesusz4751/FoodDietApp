@@ -45,13 +45,29 @@ Object.entries(sides).forEach(([key, item]) => {
   }
 });
 document.querySelector('.food-item-container').innerHTML += allItemsHTML;
+
+// Create a popup element
+const popup = document.createElement('div');
+popup.className = 'popup';
+popup.textContent = 'Not enough calories remaining';
+document.body.appendChild(popup);
+
+//Event listener required for popup functionality
+let mouseX = 0;
+let mouseY = 0;
+document.addEventListener('mousemove', (event) => {
+  mouseX = event.pageX;
+  mouseY = event.pageY;
+});
+
 //Logic for plus and minus buttons
 document.querySelectorAll('.plus').forEach((button) => {
   const id = button.dataset.foodId
   const calories = sides[id].calories;
   if (calories*2 > caloriesRemaining){
     button.classList.add('disable');
-    button.classList.toggle('fadeReverse')
+    button.classList.toggle('fadeReverse');
+    button.classList.add('disabledPlus');
   }
   else{
     button.addEventListener('click', () =>{
@@ -66,10 +82,32 @@ document.querySelectorAll('.plus').forEach((button) => {
         if (calories * (currentNumber+2) > caloriesRemaining){
           button.classList.add('disable');
           button.classList.remove('fadeReverse');
+          button.classList.add('disabledPlus');
+          popup.style.display = 'block';
+          popup.style.left = `${mouseX - popup.offsetWidth / 2}px`;
+          popup.style.top = `${mouseY - 82}px`;
         }
       }
     })
   }
+  button.addEventListener('mouseenter', (e) => {
+    if (button.classList.contains('disabledPlus')){
+      popup.style.display = 'block';
+    }
+  });
+  button.addEventListener('mousemove', (e) => {
+    if (button.classList.contains('disabledPlus')){
+      const popupWidth = popup.offsetWidth;
+      popup.style.left = `${mouseX - popupWidth / 2}px`;
+      popup.style.top = `${e.pageY - 82}px`;
+    }
+  });
+
+  button.addEventListener('mouseleave', () => {
+    if (button.classList.contains('disabledPlus')){
+      popup.style.display = 'none';
+    }
+  });
 })
 document.querySelectorAll('.minus').forEach((button) => {
   const id = button.dataset.foodId
@@ -85,6 +123,7 @@ document.querySelectorAll('.minus').forEach((button) => {
       }
       document.querySelector(`.plus-${id}`).classList.add('fadeReverse');
       document.querySelector(`.plus-${id}`).classList.remove('disable');
+      document.querySelector(`.plus-${id}`).classList.remove('disabledPlus');
     }
   })
 })
