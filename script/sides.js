@@ -1,15 +1,14 @@
 import {restaurants} from "../data/restaurants.js";
 
-// const userCalories = sessionStorage.getItem('calories');
-const userCalories = 1000;
-// if (!userCalories){
-//   window.location.href = 'home.html';
-// }
+const sides = restaurants.mcDonalds.side;
 const entree = sessionStorage.getItem('entree');
 const entreeAmount = sessionStorage.getItem('entreeAmount');
-const caloriesRemaining = userCalories - (restaurants.mcDonalds.entree[entree].calories * entreeAmount);
+const caloriesRemaining = sessionStorage.getItem('calories') - (restaurants.mcDonalds.entree[entree].calories * entreeAmount);
+if (caloriesRemaining < sides.minCalories){
+  sessionStorage.setItem('skip', true);
+  window.location.href='order-summary.html';
+}
 document.getElementById('title').innerText = `You have ${caloriesRemaining} calories remaining`
-let sides = restaurants.mcDonalds.side;
 let allItemsHTML = '';
 
 //Generate html for food items

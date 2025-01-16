@@ -1,6 +1,7 @@
 export const restaurants = {
   mcDonalds: {
     entree: {
+      minCalories: 310,
       bigMac: {
         name: 'Big Mac',
         image: '',
@@ -91,6 +92,7 @@ export const restaurants = {
       }
     },
     side: {
+      minCalories: 15,
       fries: {
         name: 'World Famous Fries',
         image: '',

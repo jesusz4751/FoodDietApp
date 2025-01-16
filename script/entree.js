@@ -1,11 +1,10 @@
 import {restaurants} from "../data/restaurants.js";
 
-// const userCalories = sessionStorage.getItem('calories');
-const userCalories = 1000;
-// if (!userCalories){
-//   window.location.href = 'home.html';
-// }
-let entrees = restaurants.mcDonalds.entree;
+const entrees = restaurants.mcDonalds.entree;
+const userCalories = sessionStorage.getItem('calories');
+if (!userCalories || userCalories < entrees.minCalories){
+  window.location.href = 'home.html';
+}
 let allItemsHTML = '';
 
 //Generate html for food items
@@ -70,6 +69,7 @@ document.querySelectorAll('.plus').forEach((button) => {
       const amountIndicator = document.getElementById(`amount-${id}`);
       const currentNumber = parseInt(amountIndicator.textContent, 10) || 0;
       const totalCalories = calories * (currentNumber+1);
+      //Adds number to indicator if enough calories left
       if (totalCalories <= userCalories){
         amountIndicator.textContent = currentNumber + 1;
         document.querySelector(`.minus-${id}`).classList.remove('disable');
