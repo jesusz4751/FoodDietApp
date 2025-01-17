@@ -1,5 +1,6 @@
 export const restaurants = {
   mcDonalds: {
+    name: "McDonald's®",
     entree: {
       minCalories: 310,
       bigMac: {
@@ -149,7 +150,9 @@ export const restaurants = {
     }
   },
   jackInTheBox: {
+    name: 'Jack in the Box®',
     entree: {
+      minCalories: 290,
       jumboJack: {
         name: 'Jumbo Jack®',
         calories: 520,
@@ -201,6 +204,7 @@ export const restaurants = {
       }
     },
     side: {
+      minCalories: 170,
       fries: {
         name: 'French Fries (Medium)',
         calories: 430,
@@ -246,7 +250,9 @@ export const restaurants = {
     }
   },
   tacoBell: {
+    name: 'Taco Bell®',
     entree: {
+      minCalories: 170,
       softTaco: {
         name: 'Soft Taco',
         calories: 180,
@@ -312,6 +318,7 @@ export const restaurants = {
       }
     },
     side: {
+      minCalories: 160,
       nacFri: {
         name: 'Nacho Fries',
         calories: 330,

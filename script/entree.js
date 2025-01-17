@@ -1,6 +1,6 @@
 import {restaurants} from "../data/restaurants.js";
 
-const entrees = restaurants.mcDonalds.entree;
+const entrees = restaurants[sessionStorage.getItem('restaurant')].entree;
 const userCalories = sessionStorage.getItem('calories');
 if (!userCalories || userCalories < entrees.minCalories){
   window.location.href = 'home.html';
@@ -106,7 +106,7 @@ document.querySelectorAll('.plus').forEach((button) => {
   });
 })
 document.querySelectorAll('.minus').forEach((button) => {
-  const id = button.dataset.foodId
+  const id = button.dataset.foodId;
   button.addEventListener('click', () =>{
     const amountIndicator = document.getElementById(`amount-${id}`);
     const currentNumber = parseInt(amountIndicator.textContent, 10) || 0;

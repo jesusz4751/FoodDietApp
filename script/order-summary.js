@@ -1,13 +1,14 @@
 import {restaurants} from "../data/restaurants.js";
 
+const restaurant = restaurants[sessionStorage.getItem('restaurant')];
 const entree = sessionStorage.getItem('entree');
 const entreeAmount = sessionStorage.getItem('entreeAmount');
 let side = '';
 let sideAmount = 1;
-let totalCalories = restaurants.mcDonalds.entree[entree].calories * entreeAmount;
-let totalProtein = restaurants.mcDonalds.entree[entree].protein * entreeAmount;
-let totalCarbs = restaurants.mcDonalds.entree[entree].carbs * entreeAmount;
-let totalFat = restaurants.mcDonalds.entree[entree].fat * entreeAmount; 
+let totalCalories = restaurant.entree[entree].calories * entreeAmount;
+let totalProtein = restaurant.entree[entree].protein * entreeAmount;
+let totalCarbs = restaurant.entree[entree].carbs * entreeAmount;
+let totalFat = restaurant.entree[entree].fat * entreeAmount; 
 
 //If there are side items, adds them to hte page
 if (!sessionStorage.getItem('skip')){
@@ -18,17 +19,17 @@ if (!sessionStorage.getItem('skip')){
     <p class="food-amount" id="side-amount"></p>
     <p class="food-title" id="side-name"></p>
   </div>`
-  document.getElementById('side-name').innerText = restaurants.mcDonalds.side[side].name;
+  document.getElementById('side-name').innerText = restaurant.side[side].name;
   document.getElementById('side-amount').innerText = sideAmount + 'x';
-  totalCalories += restaurants.mcDonalds.side[side].calories * sideAmount;
-  totalProtein += restaurants.mcDonalds.side[side].protein * sideAmount;
-  totalCarbs += restaurants.mcDonalds.side[side].carbs * sideAmount;
-  totalFat += restaurants.mcDonalds.side[side].fat * sideAmount;
+  totalCalories += restaurant.side[side].calories * sideAmount;
+  totalProtein += restaurant.side[side].protein * sideAmount;
+  totalCarbs += restaurant.side[side].carbs * sideAmount;
+  totalFat += restaurant.side[side].fat * sideAmount;
 }
 document.getElementById('calories').innerText = totalCalories;
 document.getElementById('protein').innerText = totalProtein + 'g';
 document.getElementById('carbs').innerText = totalCarbs + 'g';
 document.getElementById('fat').innerText = totalFat + 'g';
 
-document.getElementById('entree-name').innerText = restaurants.mcDonalds.entree[entree].name;
+document.getElementById('entree-name').innerText = restaurant.entree[entree].name;
 document.getElementById('entree-amount').innerText = entreeAmount + 'x';

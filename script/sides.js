@@ -1,9 +1,10 @@
 import {restaurants} from "../data/restaurants.js";
 
-const sides = restaurants.mcDonalds.side;
+const restaurant = sessionStorage.getItem('restaurant');
+const sides = restaurants[restaurant].side;
 const entree = sessionStorage.getItem('entree');
 const entreeAmount = sessionStorage.getItem('entreeAmount');
-const caloriesRemaining = sessionStorage.getItem('calories') - (restaurants.mcDonalds.entree[entree].calories * entreeAmount);
+const caloriesRemaining = sessionStorage.getItem('calories') - (restaurants[restaurant].entree[entree].calories * entreeAmount);
 if (caloriesRemaining < sides.minCalories){
   sessionStorage.setItem('skip', true);
   window.location.href='order-summary.html';
