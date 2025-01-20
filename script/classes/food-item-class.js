@@ -78,23 +78,18 @@ export class foodItem{
           }
         })
       }
+      //Event listeners for popup appearance
       button.addEventListener('mouseenter', (e) => {
-        if (button.classList.contains('disabledPlus')){
           popup.style.display = 'block';
-        }
       });
       button.addEventListener('mousemove', (e) => {
-        if (button.classList.contains('disabledPlus')){
           const popupWidth = popup.offsetWidth;
           popup.style.left = `${e.pageX - popupWidth / 2}px`;
           popup.style.top = `${e.pageY - 82}px`;
-        }
       });
-
       button.addEventListener('mouseleave', () => {
-        if (button.classList.contains('disabledPlus')){
           popup.style.display = 'none';
-        }
+        
       });
     })
     //Logic for minus button

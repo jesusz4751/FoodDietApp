@@ -7,6 +7,7 @@ const sides = restaurants[restaurant].side;
 const entree = sessionStorage.getItem('entree');
 const entreeAmount = sessionStorage.getItem('entreeAmount');
 const caloriesRemaining = sessionStorage.getItem('calories') - (restaurants[restaurant].entree[entree].calories * entreeAmount);
+//If there are not enough calories left, end program
 if (caloriesRemaining < sides.minCalories){
   sessionStorage.setItem('skip', true);
   window.location.href='order-summary.html';
@@ -18,7 +19,7 @@ const popupConstructor = new popupItem();
 const popup = popupConstructor.createPopup('Not enough calories remaining');
 
 const foodItemConstructor = new foodItem();
-//Generate HTML for entree page
+//Generate HTML for sides page
 document.querySelector('.food-item-container').innerHTML += foodItemConstructor.generateHTML(sides, caloriesRemaining);
 //Create functionality for plus and minus buttons
 foodItemConstructor.plusAndMinus(sides, caloriesRemaining, popup);

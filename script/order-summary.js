@@ -10,7 +10,7 @@ let totalProtein = restaurant.entree[entree].protein * entreeAmount;
 let totalCarbs = restaurant.entree[entree].carbs * entreeAmount;
 let totalFat = restaurant.entree[entree].fat * entreeAmount; 
 
-//If there are side items, adds them to hte page
+//If there are side items, adds them to the page
 if (!sessionStorage.getItem('skip')){
   side = sessionStorage.getItem('side');
   sideAmount = sessionStorage.getItem('sideAmount');
