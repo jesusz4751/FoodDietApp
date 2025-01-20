@@ -1,4 +1,5 @@
 import { restaurants } from "../data/restaurants.js";
+import { popupItem } from "./classes/popup-class.js";
 
 sessionStorage.clear();
 
@@ -18,16 +19,12 @@ document.querySelectorAll('.dropdown-option').forEach((option) =>{
   })
 })
 
-
-// Create a popup element
-const popup = document.createElement('div');
-popup.className = 'popup';
-popup.textContent = 'Not enough calories, please enter a valid number';
-document.body.appendChild(popup);
+//Generate and create variable for error popup
+const popupConstructor = new popupItem();
+const popup = popupConstructor.createPopup('Not enough calories, please enter a valid number');
 
 const button = document.getElementById('next-button');
 let calories = 0;
-
 //If there are not enough calories, display popup
 button.addEventListener('mouseenter', (e) => {
   calories = document.getElementById('calorie-input').value;
