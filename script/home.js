@@ -3,8 +3,17 @@ import { popupItem } from "./classes/popup-class.js";
 
 sessionStorage.clear();
 
-let restaurantChoice = document.getElementById('restaurant-choice-text').dataset.restaurantId;
+//Update restaurant options menu to match with button size dynamically
+const gridBox = document.getElementById('restaurant-selector');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const syncWidths = () => {
+  const gridBoxWidth = gridBox.offsetWidth;
+  dropdownMenu.style.width = `${gridBoxWidth}px`;
+};
+syncWidths();
+window.addEventListener('resize', syncWidths);
 
+let restaurantChoice = document.getElementById('restaurant-choice-text').dataset.restaurantId;
 //Switching restaurant based on dropdown option
 document.querySelectorAll('.dropdown-option').forEach((option) =>{
   option.addEventListener('click', () =>{

@@ -15,6 +15,7 @@
 }
 .main-description{
   margin-top: 40px;
+  padding-right: 10px;
   font-size: 16px;
 }
 #title-image{
@@ -24,17 +25,19 @@
 
 
 .home-button-grid{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 0.9fr 1fr 0.3fr;
   position: relative;
 
   margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 104px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+#restaurant-selector, .calorie-input-container, #next-button{
   height: 54px;
 }
 #restaurant-selector{
-  width: 30%;
+  width: 70%;
   position: relative;
   display: grid;
   grid-template-columns: 12% 1fr 14%;
@@ -49,15 +52,15 @@
   cursor: pointer;
 }
 #restaurant-choice-text{
-  font-size: 16px;
+  font-size: 1.2em;
   margin: 0px;
   padding-top: 1px;
 }
  .fa-2x{
-  font-size: 20px;
+  font-size: 1.5em;
  }
  .fa-arrow-right{
-  font-size: 23px;
+  font-size: 1.7em;
  }
 .button-caption{
   position: absolute;
@@ -68,14 +71,14 @@
 }
 
 .dropdown-menu{
-  width: 30%;
   position: absolute;
-  top: -105%;
-  left: 0;
+  top: -54px;
+  left: 0%;
   display: none;
   background-color: #2a2a2a;
   border: 1px solid #ccc;
   z-index: 100;
+  font-size: 16px;
 }
 .dropdown-menu a{
   display: block;
@@ -85,7 +88,7 @@
 .dropdown-menu a:hover{
   background-color: #4a4a4a;
 }
-.dropdown-button:hover + .dropdown-menu{
+.dropdown-button:hover .dropdown-menu{
   display: block;
 }
 .dropdown-menu:hover{
@@ -101,7 +104,7 @@
   position: relative;
 }
 #calorie-input{
-  width: 320px;
+  width: 60%;
   height: 100%;
   position: relative;
   background-color: #f9f9f9;

@@ -1,0 +1,165 @@
+@media(max-width: 950px){
+  .title{
+    font-size: 24px;
+  }
+  .main-description{
+    font-size: 14px;
+  }
+  #title-image{
+    height: 270px;
+  }
+}
+@media(max-width: 800px){
+  .title{
+    font-size: 21px;
+  }
+  .main-description{
+    font-size: 11px;
+  }
+  #title-image{
+    height: 200px;
+  }
+  #restaurant-choice-text{
+    font-size: 1em;
+  }
+   .fa-2x{
+    font-size: 1.3em;
+   }
+   .fa-arrow-right{
+    font-size: 1.5em;
+   }
+
+}
+@media(max-width: 660px){
+  .title{
+    font-size: 19px;
+  }
+  .main-description{
+    font-size: 10px;
+  }
+  #title-image{
+    height: 180px;
+  }
+  .home-button-grid{
+    grid-template-columns: 1fr 1fr;
+    row-gap: 24px;
+  }
+  #next-button{
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 45%;
+  }
+  #restaurant-selector, .calorie-input-container{
+    justify-self: center;
+  }
+  #calorie-input{
+    width: 100%;
+  }
+  .home-button-grid{
+    margin-left: 0%;
+   }
+}
+@media(max-width: 580px){
+  .title{
+    font-size: 16px;
+    margin-top: 90px;
+  }
+  .main-description{
+    font-size: 8px;
+  }
+  #title-image{
+    height: 140px;
+  }
+
+  #restaurant-choice-text{
+    font-size: 0.8em;
+  }
+   .fa-2x{
+    font-size: 1.2em;
+   }
+   .fa-arrow-right{
+    font-size: 1.4em;
+   }
+
+   #restaurant-selector{
+    padding-left: 14px;
+   }
+}
+@media(max-width: 490px){
+  .title{
+    font-size: 14px;
+    margin-top: 88px;
+  }
+  .main-description{
+    font-size: 7px;
+  }
+  #title-image{
+    height: 130px;
+    margin-left: 10%;
+  }
+  #restaurant-selector{
+    padding-left: 11px;
+  }
+}
+@media(max-width: 450px){
+  .header-grid{
+    margin-left: 35px;
+  }
+  .title{
+    font-size: 13px;
+    row-gap: 5px;
+    margin-top: 81px;
+  }
+  #title-image{
+    margin-left: 17%;
+  }
+  #restaurant-selector{
+    padding-left: 9px;
+    grid-template-columns: 14% 1fr 14%;
+  }
+}
+@media(max-width: 430px){
+  .header-grid{
+    margin-left: 30px;
+  }
+  .title{
+    font-size: 11px;
+    row-gap: 6px;
+    margin-top: 80px;
+  }
+  #title-image{
+    height: 115px;
+    margin-left: 14%;
+  }
+  .button-caption{
+    font-size: 11px;
+    top: -27px;
+  }
+}
+@media(max-width: 400px){
+  #title-image{
+    height: 115px;
+    margin-left: 20%;
+  }
+  .home-button-grid{
+    grid-template-columns: 1fr;
+  }
+  .calorie-input-container{
+    width: 80%;
+  }
+  #calorie-input{
+    width: 95%;
+  }
+  #restaurant-selector{
+    width: 80%;
+  }
+}
+@media(max-width: 380px){
+  .header-grid{
+    margin-left: 22px;
+  }
+  #title-image{
+    height: 110px;
+    margin-left: 18%;
+  }
+}

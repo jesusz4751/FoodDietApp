@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="../styles/home.css">
+  <link rel="stylesheet" href="../styles/resize/home-resize.css">
   <script src="https://kit.fontawesome.com/4dc47755ee.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -28,15 +29,15 @@
   </div>
   <div class="home-button-grid">
     <button id="restaurant-selector" class="dropdown-button">
-      <i class="fa-solid fa-bars fa-2x "></i>
+      <i class="fa-solid fa-bars fa-2x"></i>
       <p id="restaurant-choice-text" data-restaurant-id="mcDonalds">McDonald's&#174;</p>
       <p class="button-caption">Restaurant</p>
       <i class="fa-solid fa-arrow-right fa-2x"></i>
+      <div class="dropdown-menu">
+        <a class="dropdown-option" data-restaurant-id="jackInTheBox">Jack in the Box&#174;</a>
+        <a class="dropdown-option" data-restaurant-id="tacoBell">Taco Bell&#174;</a>
+      </div>
     </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-option" data-restaurant-id="jackInTheBox">Jack in the Box&#174;</a>
-      <a class="dropdown-option" data-restaurant-id="tacoBell">Taco Bell&#174;</a>
-    </div>
     <div class="calorie-input-container">
       <input placeholder="Enter amout here" id="calorie-input" type="number">
       <p class="button-caption">Calories</p>
