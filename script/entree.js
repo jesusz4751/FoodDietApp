@@ -14,7 +14,7 @@ const popup = popupConstructor.createPopup('Not enough calories remaining');
 
 const foodItemConstructor = new foodItem();
 //Generate HTML for entree page
-document.querySelector('.food-item-container').innerHTML += foodItemConstructor.generateHTML(entrees, userCalories);
+document.querySelector('.food-item-container').innerHTML = foodItemConstructor.generateHTML(entrees, userCalories);
 //Create functionality for plus and minus buttons
 foodItemConstructor.plusAndMinus(entrees, userCalories, popup);
 

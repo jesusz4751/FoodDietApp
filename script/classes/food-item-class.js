@@ -80,7 +80,9 @@ export class foodItem{
       }
       //Event listeners for popup appearance
       button.addEventListener('mouseenter', (e) => {
+        if (button.classList.contains('disabledPlus')){
           popup.style.display = 'block';
+        }
       });
       button.addEventListener('mousemove', (e) => {
           const popupWidth = popup.offsetWidth;

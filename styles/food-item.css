@@ -8,12 +8,6 @@
   margin-right: 44px;
   margin-bottom: 24px;
 }
-.amount{
-  position: absolute;
-  top: 14%;
-  right: 22.14%;
-  font-size: 26px;
-}
 .food-information-container{
   display: grid;
   grid-template-columns: 1fr 10% 10% 10% 10%;
@@ -99,7 +93,7 @@
   background-color: white;
   border: 1.3px solid #2a2a2a;
   border-radius: 9999px;
-  width: 9%;
+  width: 10%;
   text-align: center;
   padding: 8px 4px;
   font-weight: 700;
