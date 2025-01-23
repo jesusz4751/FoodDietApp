@@ -1,0 +1,244 @@
+@media (max-width: 840px){
+  #title{
+    font-size: 42px;
+  }
+  #description{
+    font-size: 16px;
+  }
+  #header{
+    font-size: 15px;
+  }
+  .popup{
+    font-size: 15px;
+    width: 13%;
+  }
+  .food-name{
+    font-size: 21px;
+  }
+  .fa-solid{
+    font-size: 0.8em;
+  }
+  .amount-indicator{
+    font-size: 21px;
+  }
+  .macro{
+    font-size: 9px;
+  }
+  .macro-amount{
+    font-size: 15px;
+  }
+  .food-select-button{
+    font-size: 16px;
+    max-height: 56px;
+  }
+}
+@media (max-width: 710px){
+  #title{
+    font-size: 36px;
+  }
+  #description{
+    font-size: 14px;
+  }
+  .food-item{
+    margin-right: 36px;
+  }
+  .food-name{
+    font-size: 16px;
+  }
+  .food-information-container{
+    grid-template-columns: 1fr 12% 12% 12% 12%;
+  }
+  .amount-indicator{
+    font-size: 19px;
+  }
+  .macro{
+    font-size: 8px;
+    margin-bottom: 8px;
+  }
+  .macro-amount{
+    font-size: 12px;
+  }
+  .food-select-button{
+    font-size: 15px;
+    height: 49px;
+  }
+  .popup{
+    font-size: 13px;
+    width: 15%;
+  }
+}
+@media (max-width: 625px){
+  #title{
+    font-size: 30px;
+    margin-left: 38px;
+    margin-top: 18px;
+  }
+  #description{
+    font-size: 12px;
+    margin-left: 40px;
+  }
+  #header{
+    font-size: 13px;
+    margin-left: 37px;
+  }
+  .food-item{
+    margin-right: 32px;
+    margin-left: 34px;
+    margin-bottom: 20px;
+  }
+  .food-information-container{
+    grid-template-columns: 1fr 13% 13% 13% 13%;
+  }
+  .food-name{
+    font-size: 16px;
+  }
+  .amount-indicator{
+    font-size: 19px;
+  }
+  .macro{
+    font-size: 7px;
+  }
+  .macro-amount{
+    font-size: 11px;
+  }
+  .food-select-button{
+    font-size: 14px;
+    height: 45px;
+  }
+  .popup{
+    font-size: 13px;
+    width: 15%;
+  }
+  .fa-solid{
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 530px){
+  #title{
+    font-size: 25px;
+    margin-left: 34px;
+    margin-top: 16px;
+  }
+  #description{
+    font-size: 11px;
+    margin-left: 36px;
+  }
+  #header{
+    font-size: 11px;
+    margin-left: 33px;
+  }
+  .food-item{
+    margin-right: 27px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+  .food-name{
+    font-size: 13px;
+  }
+  .macro{
+    font-size: 7px;
+    margin-bottom: 6px;
+  }
+  .macro-amount{
+    font-size: 11px;
+  }
+  .amount-indicator{
+    font-size: 17px;
+  }
+  .food-select-button{
+    font-size: 12px;
+    height: 40px;
+  }
+  .popup{
+    font-size: 11px;
+  }
+  .fa-solid{
+    font-size: 0.6em;
+  }
+}
+@media (max-width: 450px){
+  #title{
+    font-size: 21px;
+    margin-left: 28px;
+    margin-top: 14px;
+  }
+  #description{
+    font-size: 10px;
+    margin-left: 30px;
+  }
+  #header{
+    font-size: 11px;
+    margin-left: 27px;
+  }
+  .food-item{
+    margin-right: 20px;
+    margin-left: 24px;
+    margin-bottom: 20px;
+  }
+  .food-name{
+    font-size: 12px;
+  }
+  .macro{
+    font-size: 6px;
+    margin-bottom: 5px;
+  }
+  .macro-amount{
+    font-size: 10.4px;
+  }
+  .amount-indicator{
+    font-size: 15px;
+  }
+  .food-select-button{
+    font-size: 11px;
+    height: 37px;
+  }
+  .popup{
+    font-size: 10px;
+    width: 17%;
+  }
+  .fa-solid{
+    font-size: 0.5em;
+  }
+}
+@media (max-width: 416px){
+  #title{
+    font-size: 19px;
+    margin-left: 25px;
+  }
+  #description{
+    font-size: 9px;
+    margin-left: 27px;
+  }
+  #header{
+    font-size: 10px;
+    margin-left: 24px;
+  }
+  .food-item{
+    margin-right: 17px;
+    margin-left: 21px;
+    margin-bottom: 17px;
+  }
+  .food-name{
+    font-size: 10px;
+  }
+  .macro{
+    font-size: 6px;
+    margin-bottom: 4px;
+  }
+  .macro-amount{
+    font-size: 9.4px;
+  }
+  .amount-indicator{
+    font-size: 14px;
+  }
+  .food-select-button{
+    font-size: 10px;
+    height: 33px;
+  }
+  .popup{
+    font-size: 9px;
+  }
+  .fa-solid{
+    font-size: 0.45em;
+  }
+}
