@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order summary</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/global.css">
-  <link rel="stylesheet" href="../styles/order-summary.css">
-  <script src="https://kit.fontawesome.com/4dc47755ee.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <h1 id="final-title">Order summary</h1>
-  <div class="order-information">
-    <div class="food-section">
-      <div class="food-item">
-        <p class="food-amount" id="entree-amount"></p>
-        <p class="food-title" id="entree-name"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order summary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/order-summary.css" />
+    <link rel="stylesheet" href="../styles/resize/summary-resize.css" />
+    <script
+      src="https://kit.fontawesome.com/4dc47755ee.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1 id="final-title">Order summary</h1>
+    <div class="order-information">
+      <div class="food-section">
+        <div class="food-item">
+          <p class="food-amount" id="entree-amount"></p>
+          <p class="food-title" id="entree-name"></p>
+        </div>
+      </div>
+      <div class="order-macros">
+        <h2 id="nutrition-title">Nutrition facts</h2>
+        <div class="row">
+          <div class="final-macro-counter">
+            <p class="final-macro-amount" id="calories">1224</p>
+            <p class="final-macro">Calories</p>
+          </div>
+          <div class="final-macro-counter">
+            <p class="final-macro-amount" id="protein">36g</p>
+            <p class="final-macro">Protein</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="final-macro-counter">
+            <p class="final-macro-amount" id="carbs">114g</p>
+            <p class="final-macro">Carbs</p>
+          </div>
+          <div class="final-macro-counter">
+            <p class="final-macro-amount" id="fat">24g</p>
+            <p class="final-macro">Fats</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="order-macros">
-      <h2 id="nutrition-title">Nutrition facts</h2>
-      <div class="row">
-        <div class="final-macro-counter">
-          <p class="final-macro-amount" id="calories">1224</p>
-          <p class="final-macro">Calories</p>
-        </div>
-        <div class="final-macro-counter">
-          <p class="final-macro-amount" id="protein">36g</p>
-          <p class="final-macro">Protein</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="final-macro-counter">
-          <p class="final-macro-amount" id="carbs">114g</p>
-          <p class="final-macro">Carbs</p>
-        </div>
-        <div class="final-macro-counter">
-          <p class="final-macro-amount" id="fat">24g</p>
-          <p class="final-macro">Fats</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a class="final-restart fade" href="home.html">Restart</a>
-  <script src="../script/order-summary.js" type="module"></script>
-</body>
+    <a class="final-restart fade" href="home.html">Restart</a>
+    <script src="../script/order-summary.js" type="module"></script>
+  </body>
 </html>
