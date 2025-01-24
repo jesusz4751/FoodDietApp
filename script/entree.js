@@ -5,7 +5,7 @@ import { popupItem } from "./classes/popup-class.js";
 const entrees = restaurants[sessionStorage.getItem("restaurant")].entree;
 const userCalories = sessionStorage.getItem("calories");
 if (!userCalories || userCalories < entrees.minCalories) {
-  window.location.href = "../docs/index.html";
+  window.location.href = "index.html";
 }
 
 //Generate and create variable for error popup
