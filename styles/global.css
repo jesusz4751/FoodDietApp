@@ -1,8 +1,11 @@
-body{
+body {
   font-family: "Inter", serif;
 }
-
-.fade{
+button {
+  text-decoration: none;
+  color: black;
+}
+.fade {
   border-radius: 75px;
   border: none;
   transition: all 0.28s;
@@ -15,13 +18,13 @@ body{
   justify-content: center;
   text-decoration: none;
 }
-.fade:hover{
+.fade:hover {
   background-color: white;
   color: #2a2a2a;
   border: 1px solid #2a2a2a;
 }
 
-.fadeReverse{
+.fadeReverse {
   border-radius: 75px;
   border: 1px solid #2a2a2a;
   transition: all 0.28s;
@@ -34,7 +37,7 @@ body{
   justify-content: center;
   text-decoration: none;
 }
-.fadeReverse:hover{
+.fadeReverse:hover {
   background-color: #2a2a2a;
   color: white;
   border: none;
