@@ -2,7 +2,7 @@
 
 This app allows users to figure out how much food they can eat at certain restaurants within calorie limits. Using session storage, the user's information is passed on from each page and used to make calculations on food choices.
 **Link to Project: **https://jesusz4751.github.io/FoodDietApp/
-![Image of a group of people eating food together.](https://d3ogid48m9qz16.cloudfront.net/pexels-kampus-8777829.webp)
+![Image of a group of people eating food together.](https://d3ogid48m9qz16.cloudfront.net/project-example.webp)
 
 ## How it's made:
 
